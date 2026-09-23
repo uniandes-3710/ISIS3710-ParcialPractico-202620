@@ -3,7 +3,7 @@ import { plans } from "@/data/plans";
 
 export default function PlansPage() {
   return (
-    <div className="min-h-screen bg-slate-50 px-24 py-16">
+    <div className="flex-1 bg-slate-50 px-24 py-16">
       <h1 className="text-5xl font-bold text-slate-900">Explorar planes</h1>
 
       <div className="grid grid-cols-4 gap-8 mt-12">

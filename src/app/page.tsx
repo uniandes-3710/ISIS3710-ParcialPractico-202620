@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 text-center">
+    <div className="flex-1 flex flex-col items-center justify-center bg-slate-50 text-center">
       <span className="bg-blue-100 text-blue-700 text-xs font-bold rounded-full px-4 py-1">
         <span className="w-2 h-2 bg-orange-400 rounded-full inline-block mr-1"></span>
         TU CIUDAD, HOY

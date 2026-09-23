@@ -14,7 +14,7 @@ export default async function PlanDetailPage({ params }: PageProps<"/plans/[id]"
   const percent = (plan.confirmed / plan.maxPeople) * 100;
 
   return (
-    <div className="min-h-screen bg-slate-50 px-20 py-6">
+    <div className="flex-1 bg-slate-50 px-20 py-6">
       {/* Barra de arriba */}
       <div className="flex justify-between items-center">
         <Link href="/plans" className="text-slate-700">
