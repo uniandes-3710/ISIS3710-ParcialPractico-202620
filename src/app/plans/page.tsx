@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { plans } from "@/data/plans";
+import { getPlans } from "@/services/plans";
 
-export default function PlansPage() {
+export default async function PlansPage() {
+  const plans = await getPlans();
+
   return (
     <div className="flex-1 bg-slate-50 px-24 py-16">
       <h1 className="text-5xl font-bold text-slate-900">Explorar planes</h1>
@@ -11,13 +13,30 @@ export default function PlansPage() {
           <Link key={plan.id} href={`/plans/${plan.id}`}>
             <img
               src={plan.image}
-              alt={plan.title}
+              alt={plan.name}
               className="w-full h-60 object-cover rounded-xl"
             />
-            <h2 className="text-2xl text-slate-900 mt-3">{plan.title}</h2>
+            <h2 className="text-2xl text-slate-900 mt-3">{plan.name}</h2>
+            <p className="flex items-center text-sm text-slate-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-4 h-4 mr-1"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                />
+              </svg>
+              {plan.creator.name}
+            </p>
             <div className="flex justify-between items-center mt-1">
               <p className="text-slate-500">
-                Precio estimado: ${plan.price.toLocaleString("es-CO")}
+                Aproximado: ${plan.estimatedPrice}
               </p>
               <p className="flex items-center text-slate-500">
                 <svg

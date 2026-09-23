@@ -14,8 +14,8 @@ export default function Header() {
     <header className="flex justify-between items-center bg-white border-b border-slate-200 px-24 py-4">
       <div className="flex items-center gap-12">
         <Link href="/" className="flex items-center gap-3">
-          <span className="w-8 h-8 bg-blue-600 rounded-lg inline-block"></span>
-          <span className="text-2xl font-bold text-slate-900">Planes</span>
+
+          <span className="text-2xl font-bold text-slate-900">Planes Parcial</span>
         </Link>
 
         <Link href="/plans" className="text-lg font-semibold text-blue-700">
