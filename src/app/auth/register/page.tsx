@@ -40,59 +40,63 @@ export default function RegisterPage() {
         onSubmit={handleSubmit}
         className="bg-white rounded-2xl shadow-lg p-8 mt-10 w-full max-w-md"
       >
-        <label className="block text-sm font-semibold text-slate-700">
+        <label htmlFor="username" className="block text-sm font-semibold text-slate-700">
           Usuario
         </label>
         <input
           id="username"
           type="text"
           name="username"
+          placeholder="Tu usuario"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
-          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 outline-none"
+          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 text-black placeholder:text-slate-500 outline-none"
         />
 
-        <label className="block text-sm font-semibold text-slate-700 mt-4">
+        <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mt-4">
           Nombre
         </label>
         <input
           id="name"
           type="text"
           name="name"
+          placeholder="Tu nombre completo"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 outline-none"
+          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 text-black placeholder:text-slate-500 outline-none"
         />
 
-        <label className="block text-sm font-semibold text-slate-700 mt-4">
+        <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mt-4">
           Correo electrónico
         </label>
         <input
           id="email"
           type="email"
           name="email"
+          placeholder="correo@ejemplo.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 outline-none"
+          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 text-black placeholder:text-slate-500 outline-none"
         />
 
-        <label className="block text-sm font-semibold text-slate-700 mt-4">
+        <label htmlFor="password" className="block text-sm font-semibold text-slate-700 mt-4">
           Contraseña
         </label>
         <input
           id="password"
           type="password"
           name="password"
+          placeholder="••••••••"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 outline-none"
+          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 text-black placeholder:text-slate-500 outline-none"
         />
 
-        {error && <p className="text-sm text-red-600 mt-4">{error}</p>}
+        {error && <p role="alert" className="text-sm text-red-600 mt-4">{error}</p>}
 
         <button
           type="submit"
